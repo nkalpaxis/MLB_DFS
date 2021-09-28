@@ -3,6 +3,10 @@ import pandas as pd
 # download splits data from fangraphs - when filtering the splits leaderboard, 
 # the filters tab has PA range (plate appearances) set it to greater than or equal to 10 so players that have small amounts of PA's are included
 
+# you can filter vs Left / vs Right pitchers in the splits tab under Handedness
+
+# after you set filter parameters export data from the Advanced table (this table includes ISO/wOBA/K% etc)
+
 # rename vs left handed pitchers stats as vsLHP.csv
 # rename vs right handed pitchers stats as vsRHP.csv
 
