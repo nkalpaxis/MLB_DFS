@@ -6,7 +6,7 @@ import pandas as pd
 # scraping is done with FireFox
 
 # set webdriver.FireFox to driver variable
-# set executable path to geckodriver.eve location ex; C:/...
+# set executable path to geckodriver.exe location ex; C:/...
 
 driver = webdriver.Firefox(executable_path="")
 
