@@ -24,6 +24,9 @@ players = players.drop(
     axis=1,
 )
 
+# remove pitchers from players list
+players = players[players.Position != "P"]
+
 # remove periods and apostrophes from players names
 players["Nickname"] = players["Nickname"].str.replace("'", "")
 players["Nickname"] = players["Nickname"].str.replace(".", "")
