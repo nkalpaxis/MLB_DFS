@@ -115,6 +115,7 @@ vsright_bb["Name"] = vsright_bb["Name"].str.replace(".", "")
 
 vsright_bb.to_csv("vsRHP bb.csv", index=False)
 
+# drop columns not being used
 pitcher_stats = pitcher_stats.drop(
     [
         "W",
