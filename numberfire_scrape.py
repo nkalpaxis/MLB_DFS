@@ -10,7 +10,7 @@ import pandas as pd
 
 driver = webdriver.Firefox(executable_path="")
 
-# pass URL that we want to connect to
+# pass URL that selenium will connect to
 driver.get("https://www.numberfire.com/mlb/daily-fantasy/daily-baseball-projections")
 
 # allow time for page to load and numberfire to prompt login
@@ -55,7 +55,7 @@ table = driver.find_element_by_xpath(
 # create empty list to append pitcher names
 pitchers = []
 
-# locate pitcher names by class name full
+# locate pitcher names by class name "full"
 # append text of each element
 for pitcher in table.find_elements_by_class_name("full"):
     pitchers.append(pitcher.text)
