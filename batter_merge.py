@@ -2,7 +2,6 @@ import pandas as pd
 
 # read in player list, all batting splits/stats
 # rename player list Nickname column to Name in order to merge on Name column
-
 players = pd.read_csv("fdmlb.csv")
 players.rename(columns={"Nickname": "Name"}, inplace=True)
 vsleft = pd.read_csv("vsLHP.csv")
