@@ -57,22 +57,6 @@ batter_df.columns = [
     "vR HC%",
 ]
 
-# to make things easier before an excel/google sheets dump
-# the following maps format columns with percentages
-batter_df["vL K%"] = batter_df["vL K%"].map("{:,.2%}".format)
-batter_df["vL FB%"] = batter_df["vL FB%"].map("{:,.2%}".format)
-batter_df["vL FB/HR%"] = batter_df["vL FB/HR%"].map("{:,.2%}".format)
-batter_df["vL HC%"] = batter_df["vL HC%"].map("{:,.2%}".format)
-batter_df["vR K%"] = batter_df["vR K%"].map("{:,.2%}".format)
-batter_df["vR FB%"] = batter_df["vR FB%"].map("{:,.2%}".format)
-batter_df["vR FB/HR%"] = batter_df["vR FB/HR%"].map("{:,.2%}".format)
-batter_df["vR HC%"] = batter_df["vR HC%"].map("{:,.2%}".format)
-
-# the following maps format columns with floats to 3 decimal precision
-batter_df["vL ISO"] = batter_df["vL ISO"].map("{:.3f}".format)
-batter_df["vL wOBA"] = batter_df["vL wOBA"].map("{:.3f}".format)
-batter_df["vR ISO"] = batter_df["vR ISO"].map("{:.3f}".format)
-batter_df["vR wOBA"] = batter_df["vR wOBA"].map("{:.3f}".format)
 
 # write over original player list csv
 batter_df.to_csv("fdmlb.csv", index=False)
