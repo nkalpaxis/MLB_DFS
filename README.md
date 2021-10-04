@@ -12,4 +12,22 @@ To get our vs Left Handed Pitchers & vs Right Handed Pitchers splits data we'll 
 
 https://www.fangraphs.com/leaders/splits-leaderboards?splitArr=&splitArrPitch=&position=B&autoPt=true&splitTeams=false&statType=player&statgroup=1&startDate=2021-03-01&endDate=2021-11-01&players=&filter=&groupBy=season&sort=-1,1
 
-When on the splits leaderboard we first want to set plate appearances (PA) to greater than or equal to 10, the reason being is that we have numerous call ups during the year, starting players get hurt, etc .. this will ensure that we have even a small sample size for players that don't have many plate appearances at the time. In order to set plate appearances click the filters tab located on the second tool bar and the plate appearance range will be located right below. Next we want to get vs Left Handed Pitchers data, to filter this data click the splits tab located to the left of the filters tab we used, and under Handedness we can select vsLHP. 
+Here are the following steps to set the correct filters and export the data we want;
+
+- Click the 'Splits' tab on the leaderboards landing page
+- Select the 'Handedness' tab and filter 'vsLHP'
+- Select the 'Filters' tab next to the 'Splits' tab
+- Set PA (plate appearances) to greater than or equal to 10
+- Click the red update button to update the data table with our filter settings
+- Select the 'Advanced' tab above the data table and export the data which will download to a CSV (you'll see export data on right of the table above the # of results)
+- Select the 'Batted Balls' tab above the data table and export the data to a second CSV
+- Follow the steps above to download the 'Advanced' & 'Batted Balls' data for 'vsRHP'
+
+Now that we have these four csv files (2 for vsLHP and 2 for vsRHP) dump them into your code editor and rename them 'vsLHP'/'vsLHP bb'/'vsRHP'/'vsRHP bb'
+
+Next we need to get pitcher stats from fangraphs, the link is:
+
+https://www.fangraphs.com/leaders.aspx?pos=all&stats=pit&lg=all&qual=y&type=8&season=2021&month=0&season1=2021&ind=0
+
+On this page simply set the 'MIN IP:' filter from 'Qualified' to 10, then export the data to a csv (export the data of the table as it is, you do not need to export the 'Advanced' or 'Batted Balls' tabs, the 'Dashboard' tab has all the data we want)
+
