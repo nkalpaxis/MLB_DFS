@@ -1,5 +1,7 @@
 # MLB DFS Spreadsheet
 
+![mlbdfs_datatable](https://user-images.githubusercontent.com/58003892/135893989-cd028c49-43a4-413e-8163-4fe268d2ccc1.png)
+
 The scripts in this repository are used to build a MLB DFS spreadsheet tailored for the Fanduel website. The data used to create this sheet come from the following sources:
 
 - Fanduel: player list csv which includes; player names, salaries, players team, & players opponent
