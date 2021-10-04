@@ -49,3 +49,8 @@ After the fangraphs data is collected, the following steps will outline the basi
 - Run pitcher_merge.py script
 - Import 'fdmlb.csv' into google sheets/excel 
 - Import 'pitchers.csv' into a seperate tab in the same google sheets/excel workbook
+
+
+# Google Sheets / Excel Setup
+
+After we import our fdmlb.csv file into google sheets or excel there is a few things we need to do. There were lines of code in the merging scripts that used pandas map method to map specific formats for 3 decimal percision as well as format percentages, unfortunately when we import into google sheets any float value that ends in a zero (example .270/.330) would format to .27/.33 as well as percentages not carrying over. Those lines of code that format percentage and decimal percision have been taken out, instead we can use google sheets/excel 'format as percentage' & 'decrease/increase decimal places' tools located on the tool bar menu. For any column that has a percentage (vL K%/vL FB% etc..) just select them and use the format as percentage tool, for the other two columns (ISO & wOBA) use the increase/decrease decimal places tool to format them to 3 decimal places. The colors in the image above come from the conditional formatting tool which is located in the format drop down menu. Below I will link fangraphs resources that explain these sabermetrics, the articles also have tables that show what is a good 
