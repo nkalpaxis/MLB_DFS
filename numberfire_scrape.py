@@ -9,7 +9,7 @@ import pandas as pd
 # set executable path to geckodriver.eve location ex; C:/...
 
 # driver = webdriver.Firefox(executable_path="")
-driver = webdriver.Firefox(executable_path=r"C:\python\geckodriver.exe")
+driver = webdriver.Firefox(executable_path="")
 
 # pass URL that we want to connect to
 driver.get("https://www.numberfire.com/mlb/daily-fantasy/daily-baseball-projections")
@@ -36,13 +36,13 @@ fd_login.click()
 # send_keys(Keys.RETURN) mimics enter key
 email = driver.find_element_by_xpath('//*[@id="forms.login.email"]')
 email.click()
-email.send_keys("nkalpaxis@aol.com")
+email.send_keys("replace this string with your email")
 email.send_keys(Keys.RETURN)
 
 # password field
 password = driver.find_element_by_xpath('//*[@id="forms.login.password"]')
 password.click()
-password.send_keys("kalpaxis89")
+password.send_keys("replace this string with your password")
 password.send_keys(Keys.RETURN)
 
 # allow time for selenium to return to numberfire page
