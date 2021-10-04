@@ -23,11 +23,23 @@ Here are the following steps to set the correct filters and export the data we w
 - Select the 'Batted Balls' tab above the data table and export the data to a second CSV
 - Follow the steps above to download the 'Advanced' & 'Batted Balls' data for 'vsRHP'
 
-Now that we have these four csv files (2 for vsLHP and 2 for vsRHP) dump them into your code editor and rename them 'vsLHP'/'vsLHP bb'/'vsRHP'/'vsRHP bb'
+Now that we have these four csv files (2 for vsLHP and 2 for vsRHP) dump them into your code editor and rename them 'vsLHP.csv'/'vsLHP bb.csv'/'vsRHP.csv'/'vsRHP bb.csv'
 
-Next we need to get pitcher stats from fangraphs, the link is:
+Next collect the pitcher stats data from fangraphs, the link is:
 
 https://www.fangraphs.com/leaders.aspx?pos=all&stats=pit&lg=all&qual=y&type=8&season=2021&month=0&season1=2021&ind=0
 
-On this page simply set the 'MIN IP:' filter from 'Qualified' to 10, then export the data to a csv (export the data of the table as it is, you do not need to export the 'Advanced' or 'Batted Balls' tabs, the 'Dashboard' tab has all the data we want)
+On this page simply set the 'MIN IP:' filter from 'Qualified' to 10, then export the data to a csv (export the data of the table as it is, you do not need to export the 'Advanced' or 'Batted Balls' tabs, the 'Dashboard' tab has all the data we want). Dump the csv into your code editor and rename the file 'pitcher_stats.csv'
 
+# Quick notes on numberfire_scrape
+
+The numberfire_scrape.py script is used to scrape all the starting pitchers for each days slate, in order to use this script you need selenium. The script has comments that describe all the lines of code, basically you just need to set 
+
+# Basic Workflow
+
+After the fangraphs data is collected, the following steps will outline the basic workflow on how to set up the spreadsheet from start to finish:
+
+- Download players list csv from Fanduel contest you wish to enter, dump csv into code editor and rename it 'fdmlb.csv'
+- Run fanduel_clean.py script to clean the Fanduel players list csv
+- Run fangraphs_clean.py script to clean all 5 fangraph csv files
+- 
