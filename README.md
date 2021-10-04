@@ -33,13 +33,17 @@ On this page simply set the 'MIN IP:' filter from 'Qualified' to 10, then export
 
 # Quick notes on numberfire_scrape
 
-The numberfire_scrape.py script is used to scrape all the starting pitchers for each days slate, in order to use this script you need selenium. The script has comments that describe all the lines of code, basically you just need to set 
+The numberfire_scrape.py script is used to scrape all the starting pitchers for each days slate, in order to use this script you need selenium. The script has comments that describe all the lines of code. Basically you just need to set the driver variable to the path location of your geckodriver.exe, replace the email & password field strings with your fanduel login information and your all set. There is options on scraping different slates for example; Early only, Main, after hours etc .. lines 51-53 explain the options.
 
 # Basic Workflow
 
 After the fangraphs data is collected, the following steps will outline the basic workflow on how to set up the spreadsheet from start to finish:
 
 - Download players list csv from Fanduel contest you wish to enter, dump csv into code editor and rename it 'fdmlb.csv'
+- Run numberfire_scrape.py to get the slates pitchers
 - Run fanduel_clean.py script to clean the Fanduel players list csv
 - Run fangraphs_clean.py script to clean all 5 fangraph csv files
-- 
+- Run batter_merge.py script
+- Run pitcher_merge.py script
+- Import 'fdmlb.csv' into google sheets/excel 
+- Import 'pitchers.csv' into a seperate tab in the same google sheets/excel workbook
