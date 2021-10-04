@@ -53,4 +53,21 @@ After the fangraphs data is collected, the following steps will outline the basi
 
 # Google Sheets / Excel Setup
 
-After we import our fdmlb.csv file into google sheets or excel there is a few things we need to do. There were lines of code in the merging scripts that used pandas map method to map specific formats for 3 decimal percision as well as format percentages, unfortunately when we import into google sheets any float value that ends in a zero (example .270/.330) would format to .27/.33 as well as percentages not carrying over. Those lines of code that format percentage and decimal percision have been taken out, instead we can use google sheets/excel 'format as percentage' & 'decrease/increase decimal places' tools located on the tool bar menu. For any column that has a percentage (vL K%/vL FB% etc..) just select them and use the format as percentage tool, for the other two columns (ISO & wOBA) use the increase/decrease decimal places tool to format them to 3 decimal places. The colors in the image above come from the conditional formatting tool which is located in the format drop down menu. Below I will link fangraphs resources that explain these sabermetrics, the articles also have tables that show what is a good 
+After we import our fdmlb.csv file into google sheets or excel there is a few things we need to do. There were lines of code in the merging scripts that used pandas map method to map specific formats for 3 decimal percision as well as format percentages, unfortunately when we import into google sheets any float value that ends in a zero (example .270/.330) would format to .27/.33 as well as percentages not carrying over. Those lines of code that format percentage and decimal percision have been taken out, instead we can use google sheets/excel 'format as percentage' & 'decrease/increase decimal places' tools located on the tool bar menu. For any column that has a percentage (vL K%/vL FB% etc..) just select them and use the format as percentage tool, for the other two columns (ISO & wOBA) use the increase/decrease decimal places tool to format them to 3 decimal places. The colors in the image above come from the conditional formatting tool which is located in the format drop down menu. Below I will link fangraphs resources that explain these sabermetrics, the articles also have tables that show for example what is an excellent/good/above average/below average/bad ISO so you can use these ranges to determine which colors to give these ranges (I try to keep it simple green is best, blue is above average, yellow is average, red is below average/bad).
+
+# Pitchers Sheet
+
+The pitchers sheet is pretty basic, I use it with the batters data table to see which starters have good matchups as well as which pitchers I'd like to target hitters against. When determining which pitcher you might want to use you can look at his innings pitched (sample size), his K/9 (strikeouts per 9 innings), as well as his FIP & xFIP. Once you have a few in mind that you might like to start you can look at the team he is pitching against and how they stack up against whether he is a lefty or righty; so if you want to use Chris Sale against the Mets you can look at Mets hitters ISO/wOBA/K% against Left Handed hitters. When looking at pitchers I want to stack hitters against, I like to look at innings pitched to make sure a pitchers numbers aren't terrible because he pitched 1 game when he only went 2 innings and gave up 7 runs he could be terrible or just had a bad first game - regardless 2 innings is an extremely small sample size. Next I'll look for the good stuff; low K%, high walk rate, high HR/9 (home runs per 9 innings), & high FIP/xFIP. I focus a lot on HR/9 because home runs are worth so much in DFS. 
+
+
+# Sabermetrics Resources
+
+- ISO (isolated power) https://library.fangraphs.com/offense/iso/
+- Weighted On-Base Average (wOBA) https://library.fangraphs.com/offense/woba/
+- Home run to Fly ball rate (HR/FB%) https://library.fangraphs.com/offense/hrs/
+- Quality of Contact Stats (Hard Contact (HC%)) https://library.fangraphs.com/offense/quality-of-contact-stats/
+
+Pitching Sabermetrics
+
+- Fielding Independent Pitching (FIP) https://library.fangraphs.com/pitching/fip/
+- Expected Fielding Independent Pitching (xFIP) https://library.fangraphs.com/pitching/xfip/
