@@ -7,8 +7,6 @@ import pandas as pd
 
 # set webdriver.FireFox to driver variable
 # set executable path to geckodriver.eve location ex; C:/...
-
-# driver = webdriver.Firefox(executable_path="")
 driver = webdriver.Firefox(executable_path="")
 
 # pass URL that we want to connect to
