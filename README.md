@@ -62,7 +62,7 @@ The pitchers sheet is pretty basic, I use it with the batters data table to see 
 
 # Sabermetrics Resources
 
-- ISO (isolated power) https://library.fangraphs.com/offense/iso/
+- Isolated Power (ISO) https://library.fangraphs.com/offense/iso/
 - Weighted On-Base Average (wOBA) https://library.fangraphs.com/offense/woba/
 - Home run to Fly ball rate (HR/FB%) https://library.fangraphs.com/offense/hrs/
 - Quality of Contact Stats (Hard Contact (HC%)) https://library.fangraphs.com/offense/quality-of-contact-stats/
