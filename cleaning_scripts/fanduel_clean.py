@@ -3,7 +3,7 @@ import pandas as pd
 # download player list from fanduel contest & rename it fdmlb.csv
 
 # read in fanduel player list csv
-players = pd.read_csv("fdmlb.csv")
+players = pd.read_csv("fd.csv")
 
 # drop columns not being used
 players = players.drop(
@@ -32,4 +32,4 @@ players["Nickname"] = players["Nickname"].str.replace("'", "")
 players["Nickname"] = players["Nickname"].str.replace(".", "")
 
 # write over original csv
-players.to_csv("fdmlb.csv", index=False)
+players.to_csv("fd.csv", index=False)
