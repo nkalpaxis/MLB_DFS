@@ -1,5 +1,11 @@
 import pandas as pd
 
+# cleaning function to remove periods and apostrophes
+def clean_names(df, col):
+    df[col] = df[col].str.replace(".","")
+    df[col] = df[col].str.replace("'","")
+    return df
+
 # download player list from fanduel contest & rename it fdmlb.csv
 
 # read in fanduel player list csv
@@ -28,8 +34,7 @@ players = players.drop(
 players = players[players.Position != "P"]
 
 # remove periods and apostrophes from players names
-players["Nickname"] = players["Nickname"].str.replace("'", "")
-players["Nickname"] = players["Nickname"].str.replace(".", "")
+players = clean_names(players, 'Nickname')
 
 # write over original csv
 players.to_csv("fd.csv", index=False)
@@ -64,8 +69,7 @@ vsleft = vsleft.drop(
 )
 
 # remove periods and apostrophes from players names
-vsleft["Name"] = vsleft["Name"].str.replace("'", "")
-vsleft["Name"] = vsleft["Name"].str.replace(".", "")
+vsleft = clean_names(vsleft, 'Name')
 
 # write over original csv file
 vsleft.to_csv("vsLHP.csv", index=False)
@@ -93,9 +97,8 @@ vsleft_bb = vsleft_bb.drop(
     axis=1,
 )
 
-vsleft_bb["Name"] = vsleft_bb["Name"].str.replace("'", "")
-vsleft_bb["Name"] = vsleft_bb["Name"].str.replace(".", "")
-
+# remove periods and apostrophes from players names
+vsleft_bb = clean_names(vsleft_bb, 'Name')
 
 vsleft_bb.to_csv("vsLHP bb.csv", index=False)
 
@@ -118,9 +121,8 @@ vsright = vsright.drop(
     axis=1,
 )
 
-vsright["Name"] = vsright["Name"].str.replace("'", "")
-vsright["Name"] = vsright["Name"].str.replace(".", "")
-
+# remove periods and apostrophes from players names
+vsright = clean_names(vsright, 'vsright')
 
 vsright.to_csv("vsRHP.csv", index=False)
 
@@ -145,9 +147,8 @@ vsright_bb = vsright_bb.drop(
     axis=1,
 )
 
-vsright_bb["Name"] = vsright_bb["Name"].str.replace("'", "")
-vsright_bb["Name"] = vsright_bb["Name"].str.replace(".", "")
-
+# remove periods and apostrophes from players names
+vsright_bb = clean_names(vsright_bb, 'Name')
 
 vsright_bb.to_csv("vsRHP bb.csv", index=False)
 
@@ -170,8 +171,8 @@ pitcher_stats = pitcher_stats.drop(
     axis=1,
 )
 
-pitcher_stats["Name"] = pitcher_stats["Name"].str.replace("'", "")
-pitcher_stats["Name"] = pitcher_stats["Name"].str.replace(".", "")
+# remove periods and apostrophes from players names
+pitcher_stats = clean_names(pitcher_stats, 'Name')
 
 pitcher_stats.to_csv("pitcher_stats.csv", index=False)
 
@@ -193,5 +194,8 @@ barrels = barrels.drop(
     ],
     axis=1,
 )
+
+# remove periods and apostrophes from players names
+barrels = clean_names(barrels, 'Name')
 
 barrels.to_csv("barrels.csv", index=False)
