@@ -6,8 +6,8 @@ import pandas as pd
 # scraping is done with FireFox
 
 # set webdriver.FireFox to driver variable
-# set executable path to geckodriver.eve location ex; C:/...
-driver = webdriver.Firefox(executable_path=r"C:\python\geckodriver.exe")
+# set executable path to geckodriver.exe location ex; C:/...
+driver = webdriver.Firefox(executable_path="Replace this string with path to geckodriver.exe")
 
 # pass URL that we want to connect to
 driver.get("https://www.numberfire.com/mlb/daily-fantasy/daily-baseball-projections")
@@ -34,7 +34,7 @@ yahoo_login.click()
 # send_keys(Keys.RETURN) mimics enter key
 email = driver.find_element_by_xpath('//*[@id="login-username"]')
 email.click()
-email.send_keys("Enter your email here")
+email.send_keys("Replace this string with your email")
 email.send_keys(Keys.RETURN)
 
 time.sleep(4)
