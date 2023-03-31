@@ -6,15 +6,6 @@ vsleft = pd.read_csv("vsLHP.csv")
 vsright = pd.read_csv("vsRHP.csv")
 barrels = pd.read_csv("barrels.csv")
 
-
-vsleft["Name"] = vsleft["Name"].str.replace("'", "")
-vsleft["Name"] = vsleft["Name"].str.replace(".", "")
-vsright["Name"] = vsright["Name"].str.replace("'", "")
-vsright["Name"] = vsright["Name"].str.replace(".", "")
-barrels["Name"] = barrels["Name"].str.replace("'", "")
-barrels["Name"] = barrels["Name"].str.replace(".", "")
-
-
 vsleft = vsleft.reindex(columns=["Name", "PA", "ISO", "wOBA", "K%"])
 vsright = vsright.reindex(columns=["Name", "PA", "ISO", "wOBA", "K%"])
 
