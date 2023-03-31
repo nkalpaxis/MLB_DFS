@@ -7,7 +7,6 @@ def clean_names(df, col):
     return df
 
 # download player list from fanduel contest & rename it fdmlb.csv
-
 # read in fanduel player list csv
 players = pd.read_csv("fd.csv")
 
@@ -122,7 +121,7 @@ vsright = vsright.drop(
 )
 
 # remove periods and apostrophes from players names
-vsright = clean_names(vsright, 'vsright')
+vsright = clean_names(vsright, 'Name')
 
 vsright.to_csv("vsRHP.csv", index=False)
 
