@@ -7,7 +7,7 @@ import pandas as pd
 
 # set webdriver.FireFox to driver variable
 # set executable path to geckodriver.eve location ex; C:/...
-driver = webdriver.Firefox(executable_path="")
+driver = webdriver.Firefox(executable_path=r"C:\python\geckodriver.exe")
 
 # pass URL that we want to connect to
 driver.get("https://www.numberfire.com/mlb/daily-fantasy/daily-baseball-projections")
@@ -26,22 +26,25 @@ login1 = driver.find_element_by_xpath(
 login1.click()
 
 # locate and click fanduel login option
-fd_login = driver.find_element_by_xpath("/html/body/div[4]/div/ul/li[1]/a")
-fd_login.click()
+yahoo_login = driver.find_element_by_xpath("/html/body/div[4]/div/ul/li[3]/a")
+yahoo_login.click()
 
 # email field
 # send_keys() will type in account email
 # send_keys(Keys.RETURN) mimics enter key
-email = driver.find_element_by_xpath('//*[@id="forms.login.email"]')
+email = driver.find_element_by_xpath('//*[@id="login-username"]')
 email.click()
-email.send_keys("replace this string with your email")
+email.send_keys("nkalpaxis")
 email.send_keys(Keys.RETURN)
 
+time.sleep(4)
+
 # password field
-password = driver.find_element_by_xpath('//*[@id="forms.login.password"]')
-password.click()
-password.send_keys("replace this string with your password")
-password.send_keys(Keys.RETURN)
+pass_ = driver.find_element_by_xpath('//*[@id="login-passwd"]')
+pass_.click()
+pass_.send_keys("hammy1992")
+pass_.send_keys(Keys.RETURN)
+
 
 # allow time for selenium to return to numberfire page
 time.sleep(3)
@@ -55,10 +58,10 @@ slate_button = driver.find_element_by_css_selector(
 )
 slate_button.click()
 
-all_day_slate = driver.find_element_by_xpath(
-    "/html/body/main/div[2]/div[2]/div/div[2]/div[3]/div/ul/li[3]"
-)
-all_day_slate.click()
+# all_day_slate = driver.find_element_by_xpath(
+#     "/html/body/main/div[2]/div[2]/div/div[2]/div[3]/div/ul/li[3]"
+# )
+# all_day_slate.click()
 
 # early_only = driver.find_element_by_xpath(
 #     "/html/body/main/div[2]/div[2]/div/div[2]/div[3]/div/ul/li[6]"
@@ -70,10 +73,10 @@ all_day_slate.click()
 # )
 # afternoon_only.click()
 
-# main_slate = driver.find_element_by_xpath(
-#     "/html/body/main/div[2]/div[2]/div/div[2]/div[3]/div/ul/li[8]"
-# )
-# main_slate.click()
+main_slate = driver.find_element_by_xpath(
+    "/html/body/main/div[2]/div[2]/div/div[2]/div[3]/div/ul/li[8]"
+)
+main_slate.click()
 
 # after_hours = driver.find_element_by_xpath(
 #     "/html/body/main/div[2]/div[2]/div/div[2]/div[3]/div/ul/li[10]"
